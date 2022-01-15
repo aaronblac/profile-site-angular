@@ -1,0 +1,58 @@
+.proj h2 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.proj p {
+  width: 60%;
+  color: #f8f8ff;
+  font-size: 18px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.prj {
+  height: 300px;
+}
+
+.proj-row {
+  padding: 30px 0;
+}
+
+.image {
+  position: relative;
+  display: inline-block;
+}
+
+.image:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  transition: opacity 0.2s ease-in;
+  display:flex;
+  align-items: center;
+}
+
+.show {
+  width: 90%;
+  box-sizing: content-box;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.work p {
+  width: 60%;
+  text-align: center;
+  padding: 30px 0 0 0;
+  margin: auto;
+}

@@ -1,0 +1,31 @@
+.topTop {
+  padding-left: 80px;
+}
+
+button.res{
+  position: absolute;
+  top: 16px;
+  right:40px;
+  color: #f8f8ff;
+  font-family: 'Montserrat', sans-serif;
+  background-color: transparent;
+  border:none;
+
+}
+
+button.res:hover{
+  text-decoration: none;
+  color: #11999E;
+}
+
+.mine {
+  font-family: 'Montserrat', sans-serif;
+  color: #f8f8ff;
+  font-size: 500%;
+}
+
+.dev {
+  font-family: 'Montserrat', sans-serif;
+  color: #f8f8ff;
+  font-size: 230%;
+}

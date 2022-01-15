@@ -1,0 +1,49 @@
+.cv {
+  text-align: center;
+  background-color: #08050b;
+}
+
+button{
+  background-color: transparent;
+  border:none;
+}
+
+.hme {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+}
+
+.cvImg {
+  padding: 10px;
+}
+.drop {
+  padding: 10px 10px;
+}
+
+.drop img {
+  height: 45px;
+}
+
+.drop a {
+  text-decoration: none;
+}
+.labels {
+  color: #f8f8ff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  display: block;
+  padding-top: 10px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+.drop:hover h6 {
+  opacity: 1;
+}
+
+.hme {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+}

@@ -16,6 +16,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ContactSectionComponent } from './components/contact-section/contact-section.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PageNavComponent } from './components/page-nav/page-nav.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PageNavComponent } from './components/page-nav/page-nav.component';
     HeaderComponent,
     ContactSectionComponent,
     FooterComponent,
-    PageNavComponent
+    PageNavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
