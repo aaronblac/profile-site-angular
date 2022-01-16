@@ -1,0 +1,71 @@
+
+.btn {
+  background-color: #66BFBF;
+  border-radius: 6px;
+  display: inline-block;
+  // cursor: pointer;
+  color: #f8f8ff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 40px;
+  text-decoration: none;
+  margin-top: 10px;
+  text-align: center;
+}
+.btn:hover {
+  background-color: #11999E;
+}
+
+.form-control:focus {
+  border-color: #66BFBF;
+  box-shadow: 0 0 0 0.2rem rgba(102,191,191,0.5);
+}
+
+.btn:active {
+  position: relative;
+  top: 1px;
+}
+
+.container {
+  padding-bottom: 40px;
+  width: 50%;
+}
+
+.contact-me h3 {
+  padding-top: 20px;
+}
+
+label {
+  color: #40514E;
+  margin-top: 8px;
+}
+
+.antispam {
+  display: none;
+}
+
+.mt-2 {
+  text-align: left;
+}
+
+.button {
+  text-align: center;
+}
+
+.thnks {
+  display: none;
+}
+
+.bottom-container {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  background-color: #66BFBF;
+  text-align: center;
+}
+
+.copy {
+  color: #11999E;
+}

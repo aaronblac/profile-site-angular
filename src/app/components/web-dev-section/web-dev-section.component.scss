@@ -28,6 +28,9 @@
   opacity: 1;
 }
 
+.image img {
+  border-radius:0.625rem;
+}
 .overlay {
   opacity: 0;
   width: 100%;
@@ -40,6 +43,7 @@
   transition: opacity 0.2s ease-in;
   display:flex;
   align-items: center;
+  border-radius: 0.625rem;
 }
 
 .show {

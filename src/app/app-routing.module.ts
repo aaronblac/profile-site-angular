@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { GameDevSectionComponent } from './components/game-dev-section/game-dev-section.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PlatformHustleComponent } from './pages/platform-hustle/platform-hustle.component';
 import { ResumeComponent } from './pages/resume/resume.component';
