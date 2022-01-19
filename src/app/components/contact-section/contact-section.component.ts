@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ContactService } from 'src/app/contact.service';
 
 @Component({
   selector: 'app-contact-section',
@@ -9,33 +9,42 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class ContactSectionComponent implements OnInit {
 
-  form: FormGroup;
-  name: FormControl = new FormControl('',Validators.required);
-  phone: FormControl = new FormControl('', [Validators.pattern('[- +()0-9]+')]);
-  email: FormControl = new FormControl('', [Validators.required, Validators.email]);
-  message: FormControl = new FormControl('',[Validators.required, Validators.minLength(4)]);
-  honeypot: FormControl = new FormControl('');
-  submitted: boolean = false;
-  isLoading: boolean = false;
-  responseMessage: string;
-  constructor(private formBuilder:FormBuilder, private http:HttpClient) {
-    this.form = this.formBuilder.group({
-      name: this.name,
-      phone: this.phone,
-      email: this.email,
-      message: this.message,
-      honeypot: this.honeypot
+
+  disabledSubmitButton: boolean = true;
+  // optionsSelect: Array<any>;
+
+  FormData: FormGroup;
+  @HostListener('input') oninput() {
+
+    if (this.FormData.valid) {
+      this.disabledSubmitButton = false;
+    }
+  }
+
+  constructor(private builder:FormBuilder, private contactService: ContactService) {
+
+    this.FormData = this.builder.group({
+      name: new FormControl('',Validators.required),
+      phone: new FormControl('', [Validators.pattern('[- +()0-9]+')]),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      message: new FormControl('',[Validators.required, Validators.minLength(4)]),
+      honeypot: new FormControl('')
     })
   }
 
-
-
-
+  onSubmit() {
+    this.contactService.sendMessage(this.FormData.value).subscribe(() => {
+      alert('Your message has been sent.');
+      this.FormData.reset();
+      this.disabledSubmitButton = true;
+    }, error => {
+      console.log('Error', error);
+    });
+  }
 
   ngOnInit(): void {
 
   }
 
-
-
 }
+

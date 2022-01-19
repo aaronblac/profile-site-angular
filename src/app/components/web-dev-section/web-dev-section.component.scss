@@ -1,14 +1,15 @@
-.proj h2 {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.proj p {
-  width: 60%;
-  color: #f8f8ff;
-  font-size: 18px;
-  text-align: center;
-  margin: 10px auto;
+.proj {
+  & h2 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  & p {
+    width: 60%;
+    color: #f8f8ff;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px auto;
+  }
 }
 
 .prj {
@@ -22,15 +23,14 @@
 .image {
   position: relative;
   display: inline-block;
+  &:hover .overlay {
+    opacity: 1;
+  }
+  & img {
+    border-radius:0.625rem;
+  }
 }
 
-.image:hover .overlay {
-  opacity: 1;
-}
-
-.image img {
-  border-radius:0.625rem;
-}
 .overlay {
   opacity: 0;
   width: 100%;
