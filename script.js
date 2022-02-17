@@ -1,4 +1,4 @@
-$(function() {
+function mailCode() {
 
   var form = $('#form'),
     name = $('#name'),
@@ -16,7 +16,7 @@ $(function() {
   submit.on('click', function(e) {
     e.preventDefault();
     if (validate()) {
-      $.ajax({
+      jQuery.ajax({
         type: "POST",
         url: "mail.php",
         data: form.serialize(),
@@ -59,4 +59,5 @@ $(function() {
     return valid;
   }
 
-});
+};
+window.onload = mailCode;

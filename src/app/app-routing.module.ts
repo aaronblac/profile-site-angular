@@ -12,7 +12,6 @@ const routes: Routes = [
   {path:'resume', component:ResumeComponent},
   {path:'space-shooter', component:SpaceShooterComponent},
   {path:'the-great-fleece', component:TheGreatFleeceComponent}
-
 ];
 
 @NgModule({
